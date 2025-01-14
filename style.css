@@ -1,0 +1,162 @@
+html{
+  zoom:150%;
+}
+
+@font-face {
+  font-family: "myFirstFont";
+  src: url("fonts/WinterPrime.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mySecondFont";
+  src: url("fonts/Milanello - Free Personal.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "myThirdFont";
+  src: url("fonts/MagicalNordic_PERSONAL_USE_ONLY.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "myFourthFont";
+  src: url("fonts/Bonello-Regular.otf") format("opentype");
+}
+
+/* Header Styles */
+.header-nav {
+  background-color: rgb(207, 207, 207);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerText, .bi {
+  margin: 7px;
+}
+
+.main_Img {
+  display: flex;
+  justify-content: center;}
+
+
+/* Caption Styling */
+.captionContainer {
+  font-family: "myFourthFont";
+  text-align: center;
+}
+
+/* Animated Heart Icon */
+.bi-heart-fill {
+  color: rgb(235, 60, 60);
+  animation: pump 1s infinite ease-in-out;
+}
+
+@keyframes pump {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Fade-in Text Animation */
+.fade-in-text {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 2s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Content Container */
+.content {
+  margin: 120px auto; /* Center the content */
+  border: 5px solid black;
+  padding: 25px;
+  background-image: url(./images/paper-texture.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+  width: 90%; /* Relative to viewport for responsiveness */
+  max-width: 1200px; /* Prevent overly wide content */
+  height: auto; /* Adapts to inner content */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Paragraph Styles */
+.content-para {
+  
+  text-align: justify; /* Justify text alignment */
+  line-height: 1 em; 
+  font-family: "Playwrite FR Moderne", serif;
+  word-wrap: break-word; /* Handle long words */
+  white-space: pre-wrap; /* Respect line breaks */
+  padding: 20px 10px;
+}
+
+/* Section Header */
+.content-h1 {
+  font-family: "Playwrite AU VIC Guides", serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Rolling Text */
+.rolling-text-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.rolling-text {
+  display: inline-block;
+  animation: scroll-left 6s linear infinite;
+  font-size: 1rem;
+  font-family: "Lexend", serif;
+  color: #333;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(350%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Scroll Snap for Sections */
+html {
+  scroll-snap-type: y proximity;
+}
+
+.content {
+  scroll-snap-align: start;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content {
+    margin: 60px auto;
+    width: 95%;
+    padding: 15px;
+  }
+
+  .content-para {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
