@@ -139,13 +139,7 @@ html{
 }
 
 /* Scroll Snap for Sections */
-html {
-  scroll-snap-type: y proximity;
-}
 
-.content {
-  scroll-snap-align: start;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
